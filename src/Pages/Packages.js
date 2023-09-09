@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useLocation } from "react-router-dom";
 import { Package } from "../Component/Package";
 import useFetch from "../Hooks/useFetch";
+import Offers from "../Component/Offers";
 const Packages = () => {
   const location = useLocation(); // React Hook
   const id = location.pathname.split("/")[2];
@@ -42,7 +43,7 @@ const Packages = () => {
 
         </div>
         <div className="col border">
-          <h3>Offers</h3>
+          <h3><Offers/></h3>
         </div>
       </div>
     </div>
