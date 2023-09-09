@@ -1,6 +1,7 @@
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useLocation } from "react-router-dom";
+import { Package } from "../Component/Package";
 import useFetch from "../Hooks/useFetch";
 const Packages = () => {
   const location = useLocation(); // React Hook
@@ -8,7 +9,7 @@ const Packages = () => {
   const { data, loading, error, reFetch } = useFetch(
     `https://localservice.onrender.com/api/v1/packages/${id}`
   );
-console.log(data)
+  console.log(data);
   let service = "";
   if (data.length !== 0) {
     service = data[0].serviceName;
@@ -27,14 +28,17 @@ console.log(data)
             className="rounded-4 img-fluid"
             src={service.imgUrl}
             alt={service.name}
-            // style={{ width: "100%", height: "100%", backgroundSize: "cover" }}
           />
         </div>
       </div>
       <hr />
       <div className="row">
         <div className="col">
-          <h3>Package List</h3>
+          <Package />
+          <Package />
+          <Package />
+          <Package />
+
         </div>
         <div className="col border">
           <h3>Offers</h3>
