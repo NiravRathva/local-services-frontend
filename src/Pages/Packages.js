@@ -34,10 +34,11 @@ const Packages = () => {
       <hr />
       <div className="row">
         <div className="col">
-          <Package />
-          <Package />
-          <Package />
-          <Package />
+        <div className="col">
+          {data.map((Packages) => (
+            <Package Packages={Packages} service={service} key={Packages._id} />
+          ))}
+        </div>
 
         </div>
         <div className="col border">
