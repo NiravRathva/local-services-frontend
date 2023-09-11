@@ -25,37 +25,37 @@ const Navbar = () => {
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0 fw-bold">
-              <Link to="/">
+             
                 <li className="nav-item ">
-                  <a className="nav-link text-white" aria-current="page">
+                  <Link to="/" className="nav-link text-white" aria-current="page">
                     Home
-                  </a>
+                  </Link>
                 </li>
-              </Link>
+              
 
-              <Link to="/about">
+              
                 <li className="nav-item">
-                  <a className="nav-link text-white" href="/about">
+                  <Link className="nav-link text-white" to="/about">
                     About
-                  </a>
+                  </Link>
                 </li>
-              </Link>
-              <Link to="/contact">
+         
+              
                 <li className="nav-item">
-                  <a className="nav-link text-white" href="/contact">
+                  <Link  className="nav-link text-white" to="/contact">
                     Contact
-                  </a>
+                  </Link>
                 </li>
-              </Link>
+              
               <Link>
                 <li className="nav-item">
-                  <a className="nav-link text-white">
+                  <Link className="nav-link text-white">
                     Cart
                     <FontAwesomeIcon
                       icon={faCartShopping}
                       style={{ color: "black" }}
                     />
-                  </a>
+                  </Link>
                 </li>
               </Link>
             </ul>

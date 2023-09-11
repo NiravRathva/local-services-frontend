@@ -4,6 +4,7 @@ import Home from "./Pages/Home";
 import Packages from "./Pages/Packages";
 import About from "./Pages/About";
 import Contact from "./Pages/Contact";
+import Register from "./Pages/Register";
 function App() {
   return (
     <div className="App">
@@ -14,6 +15,7 @@ function App() {
         <Route path="/about" element={<About />}></Route>
         <Route path="/contact" element={<Contact />}></Route>
         <Route path="packages/:id" element={<Packages />} />
+        <Route path="/register" element={<Register/>}></Route>
         </Routes>
       </Router>
     </div>
