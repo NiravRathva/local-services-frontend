@@ -6,7 +6,7 @@ import { useState } from "react";
 import Cart from "./Cart";
 const Navbar = () => {
   const user=useSelector((state)=>state.user)
-  const name = user.user.name ? user.user.name.split(' ')[0] : '';
+  const name = user.user? user.user.name.split(' ')[0] : '';
   const [open, setOpen] = useState(false);
   return (
     <div>
