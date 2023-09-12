@@ -4,8 +4,6 @@ const initialState = {
   user: null,
   loading: false,
   error: false,
-  followers: [],
-  following: [],
 };
 
 export const userSlice = createSlice({

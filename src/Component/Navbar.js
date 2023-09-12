@@ -1,8 +1,11 @@
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom"
+import { useSelector } from "react-redux";
 
 const Navbar = () => {
+  const user=useSelector((state)=>state.user)
+  const name=user.user.name.split(' ')[0]
   return (
     <div>
       <nav className="navbar navbar-expand-lg bg-primary text-white">
@@ -61,8 +64,9 @@ const Navbar = () => {
             </ul>
 
            
-              <button className="btn btn-dark">Nirav</button>
-            
+            {name ? (
+              <button className="btn btn-dark">{name}</button>
+            ) : (
               <div>
                 <Link to="/login">
                   <button className="btn btn-dark mx-1">Login</button>
@@ -72,6 +76,7 @@ const Navbar = () => {
                   <button className="btn btn-dark">Register</button>
                 </Link>
               </div>
+            )}
         
           </div>
         </div>
