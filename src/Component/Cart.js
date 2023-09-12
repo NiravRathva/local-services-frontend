@@ -19,16 +19,13 @@ const Cart = ({ open, setOpen }) => {
   const url = "https://localservice.onrender.com/api/v1";
 
   const handlePayment = async () => {
-    console.log("bar");
     try {
-      console.log("moy");
       const response = await axios.post(
         `${url}/stripe/create-checkout-session`,
         {
           packages,
         }
       );
-      console.log(response, packages);
       if (response.data.url) {
         window.location.href = response.data.url;
       }

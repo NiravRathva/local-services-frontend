@@ -6,7 +6,6 @@ const Home = () => {
   const { data, loading, error, reFetch } = useFetch(
     `https://localservice.onrender.com/api/v1/services`
   );
-  // console.log(data);
 
   
   return (

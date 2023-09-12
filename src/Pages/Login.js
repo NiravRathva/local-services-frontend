@@ -20,7 +20,6 @@ const Login = () => {
         "https://localservice.onrender.com/api/v1/auth/signin",
         { email, password }
       );
-      console.log(res.data.data.user);
       dispatch(loginSuccess(res.data.data.user))
       navigate(`/`);
     } catch (error) {

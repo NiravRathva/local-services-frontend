@@ -9,19 +9,6 @@ const Register = () => {
   const [password, setPassword] = useState("");
 
   const navigate = useNavigate();
-  const handleRegister = async (e) => {
-    e.preventDefault();
-    try {
-      const res = await axios.post(
-        "https://black-mechanic-yknxe.ineuron.app:5000/api/v1/auth/signup",
-        { name: name, mobile: mobileNo, email: email, password: password }
-      );
-      navigate(`/`);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
   const handleSubmit = async (e) => {
     e.preventDefault(); // Prevent the default form submission behavior
 
