@@ -2,10 +2,13 @@ import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom"
 import { useSelector } from "react-redux";
-
+import { useState } from "react";
+import Cart from "./Cart";
 const Navbar = () => {
   const user=useSelector((state)=>state.user)
   const name=user.user.name.split(' ')[0]
+
+  const [open, setOpen] = useState(false);
   return (
     <div>
       <nav className="navbar navbar-expand-lg bg-primary text-white">
@@ -52,7 +55,7 @@ const Navbar = () => {
               
               <Link>
                 <li className="nav-item">
-                  <Link className="nav-link text-white">
+                  <Link className="nav-link text-white" onClick={()=>setOpen(!open)}>
                     Cart
                     <FontAwesomeIcon
                       icon={faCartShopping}
@@ -81,7 +84,7 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
-     
+      {open && <Cart setOpen={setOpen} open={open} />}
     </div>
   )
 }
