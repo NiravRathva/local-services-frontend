@@ -11,8 +11,6 @@ export const Package = ({ Packages, service }) => {
   if (Packages.length !== 0) {
     descPara = Packages.desc.split(".");
   }
-
-  console.log(Packages._id,Packages.name,Packages.price,service.imgUrl)
   return (
     <div className="row my-5">
       <div className="col-8 text-start">
