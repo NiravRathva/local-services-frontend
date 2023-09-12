@@ -9,7 +9,9 @@ export const cartSlice = createSlice({
   initialState,
   reducers: {
     addToCart: (state, action) => {
+        console.log("dfsdf")
       const item = state.packages.find((item) => item.id === action.payload.id);
+      console.log(item)
       if (item) {
         item.quantity += action.payload.quantity;
       } else {

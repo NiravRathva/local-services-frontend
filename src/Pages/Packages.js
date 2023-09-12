@@ -7,10 +7,11 @@ import Offers from "../Component/Offers";
 const Packages = () => {
   const location = useLocation(); // React Hook
   const id = location.pathname.split("/")[2];
+  //fetching packages 
   const { data, loading, error, reFetch } = useFetch(
     `https://localservice.onrender.com/api/v1/packages/${id}`
   );
-  console.log(data);
+
   let service = "";
   if (data.length !== 0) {
     service = data[0].serviceName;
